@@ -69,14 +69,7 @@ FILE_OPTIONS = {
                         'to set this value if the base URL contains a path '
                         '(eg /prefix/v2.0) or the endpoint should be found on '
                         'a different server.'),
-        cfg.StrOpt('onready',
-                   help='onready allows you to send a notification when the '
-                        'process is ready to serve For example, to have it '
-                        'notify using systemd, one could set shell command: '
-                        '"onready = systemd-notify --ready" or a module '
-                        'with notify() method: '
-                        '"onready = keystone.common.systemd".'),
-        cfg.IntOpt('public_workers', default=1,
+       cfg.IntOpt('public_workers', default=1,
                    help='The number of worker processes to serve the public '
                         'WSGI application'),
         cfg.IntOpt('admin_workers', default=1,
